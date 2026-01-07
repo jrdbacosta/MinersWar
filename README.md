@@ -87,4 +87,28 @@ After setting the variable, you can run the deployment with the Sepolia network:
 npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
 ```
 
+### Security checks
+
+The CI runs `npm audit` for both root and `frontend/`. To fix vulnerabilities locally run:
+
+```bash
+cd frontend
+npm audit fix
+# or, if necessary (may apply breaking changes):
+npm audit fix --force
+```
+
+CI also includes an ESLint linting job; run locally with:
+
+```bash
+npx eslint --ext .js,.ts .
+```
+
+### Manual deploy via GitHub Actions
+
+There is a manual GitHub Actions workflow `Deploy` you can run from the Actions tab. It requires repository secrets:
+- `SEPOLIA_RPC_URL`
+- `SEPOLIA_PRIVATE_KEY`
+
+
 ````

@@ -31,6 +31,56 @@ jobs:
         env:
           CI: true
 
+  lint:
+    name: Lint (ESLint)
+    runs-on: ubuntu-latest
+    needs: []
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (root)
+        run: npm ci
+        env:
+          CI: true
+
+      - name: Run ESLint on repo
+        run: npx eslint --ext .js,.ts . || true
+
+  audit:
+    name: NPM Audit (root + frontend)
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (root)
+        run: npm ci
+        env:
+          CI: true
+
+      - name: Run npm audit (root)
+        run: npm audit --audit-level=moderate || true
+
+      - name: Install frontend deps
+        working-directory: frontend
+        run: npm ci
+
+      - name: Run npm audit (frontend)
+        working-directory: frontend
+        run: npm audit --audit-level=moderate || true
+
   frontend-build:
     name: Frontend build
     runs-on: ubuntu-latest

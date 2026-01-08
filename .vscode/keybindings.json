@@ -1,0 +1,12 @@
+[
+  {
+    "key": "cmd+alt+g",
+    "command": "workbench.action.tasks.runTask",
+    "args": "GH: Stream Run Logs (watch)"
+  },
+  {
+    "key": "cmd+alt+h",
+    "command": "workbench.action.tasks.runTask",
+    "args": "GH: Poll & Save Logs"
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "GH: Stream Run Logs (watch)",
+      "type": "shell",
+      "command": "/bin/bash",
+      "args": [
+        "-lc",
+        "gh run watch ${input:runId} --repo ${input:repo}"
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "GH: Poll & Save Logs",
+      "type": "shell",
+      "command": "/bin/bash",
+      "args": [
+        "-lc",
+        "${env:HOME}/tools/gh-stream-macos.sh --repo ${input:repo} --run ${input:runId} ${input:autoRerunFlag}"
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "repo",
+      "type": "promptString",
+      "description": "Repo (owner/repo). Leave blank to auto-detect from git remote",
+      "default": ""
+    },
+    {
+      "id": "runId",
+      "type": "promptString",
+      "description": "Run ID (enter for latest when running Poll & Save Logs). For watch, provide a run id.",
+      "default": ""
+    },
+    {
+      "id": "autoRerunFlag",
+      "type": "pickString",
+      "description": "Auto-rerun when logs missing?",
+      "options": [
+        {
+          "label": "no",
+          "value": ""
+        },
+        {
+          "label": "yes",
+          "value": "--auto-rerun --non-interactive"
+        }
+      ],
+      "default": ""
+    }
+  ]
+}

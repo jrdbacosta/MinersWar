@@ -15,6 +15,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Add GitHub host key from secret
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GITHUB_RSA_KEY }}" >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

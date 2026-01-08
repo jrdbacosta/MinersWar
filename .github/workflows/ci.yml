@@ -102,7 +102,7 @@ jobs:
           CI: true
 
       - name: Run ESLint on repo
-        run: npx eslint --ext .js,.ts . || true
+        run: npx eslint . || true
 
   audit:
     name: NPM Audit (root + frontend)

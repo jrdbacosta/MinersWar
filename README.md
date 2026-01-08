@@ -101,7 +101,7 @@ npm audit fix --force
 CI also includes an ESLint linting job; run locally with:
 
 ```bash
-npx eslint --ext .js,.ts .
+	npx eslint .
 ```
 
 ### Manual deploy via GitHub Actions

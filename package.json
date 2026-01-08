@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test",
-    "lint": "npx eslint --ext .js,.ts,.tsx .",
-    "lint:fix": "npx eslint --ext .js,.ts,.tsx . --fix"
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -34,5 +34,8 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.4.0"
+  },
+  "volta": {
+    "node": "22.21.1"
   }
 }

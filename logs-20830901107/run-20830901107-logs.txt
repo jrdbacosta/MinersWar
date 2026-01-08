@@ -1,0 +1,188 @@
+Deploy on push to main or tag	Set up job	﻿2026-01-08T20:34:13.1278139Z Current runner version: '2.330.0'
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1311928Z ##[group]Runner Image Provisioner
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1313072Z Hosted Compute Agent
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1314089Z Version: 20251211.462
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1315197Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1316277Z Build Date: 2025-12-11T16:28:49Z
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1317210Z Worker ID: {c4238c42-38e2-4087-b81d-bac4db1ef9af}
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1318333Z ##[endgroup]
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1319127Z ##[group]Operating System
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1319983Z Ubuntu
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1320590Z 24.04.3
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1321360Z LTS
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1321979Z ##[endgroup]
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1322736Z ##[group]Runner Image
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1323651Z Image: ubuntu-24.04
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1324637Z Version: 20260105.202.1
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1326195Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260105.202/images/ubuntu/Ubuntu2404-Readme.md
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1328278Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260105.202
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1330137Z ##[endgroup]
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1331706Z ##[group]GITHUB_TOKEN Permissions
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1334482Z Contents: read
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1335437Z Metadata: read
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1336128Z Packages: read
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1337053Z ##[endgroup]
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1339791Z Secret source: Actions
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1340877Z Prepare workflow directory
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1775070Z Prepare all required actions
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.1829078Z Getting action download info
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.4610129Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.5650756Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+Deploy on push to main or tag	Set up job	2026-01-08T20:34:13.7606478Z Complete job name: Deploy on push to main or tag
+Deploy on push to main or tag	Checkout code	﻿2026-01-08T20:34:13.8270839Z ##[group]Run actions/checkout@v4
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8271602Z with:
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8271993Z   repository: jrdbacosta/MinersWar
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8272660Z   token: ***
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8273034Z   ssh-strict: true
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8273424Z   ssh-user: git
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8273983Z   persist-credentials: true
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8274425Z   clean: true
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8274822Z   sparse-checkout-cone-mode: true
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8275291Z   fetch-depth: 1
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8275707Z   fetch-tags: false
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8276108Z   show-progress: true
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8276493Z   lfs: false
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8276849Z   submodules: false
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8277240Z   set-safe-directory: true
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.8277830Z ##[endgroup]
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9352256Z Syncing repository: jrdbacosta/MinersWar
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9354187Z ##[group]Getting Git version info
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9354911Z Working directory is '/home/runner/work/MinersWar/MinersWar'
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9355822Z [command]/usr/bin/git version
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9420623Z git version 2.52.0
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9445243Z ##[endgroup]
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9458940Z Temporarily overriding HOME='/home/runner/work/_temp/dd8511de-054f-4cd4-8755-373dd62139fb' before making global git config changes
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9471628Z Adding repository directory to the temporary git global config as a safe directory
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9472859Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MinersWar/MinersWar
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9509451Z Deleting the contents of '/home/runner/work/MinersWar/MinersWar'
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9512897Z ##[group]Initializing the repository
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9516983Z [command]/usr/bin/git init /home/runner/work/MinersWar/MinersWar
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9608457Z hint: Using 'master' as the name for the initial branch. This default branch name
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9609895Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9611263Z hint: to use in all of your new repositories, which will suppress this warning,
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9612346Z hint: call:
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9613170Z hint:
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9614125Z hint: 	git config --global init.defaultBranch <name>
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9614697Z hint:
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9615226Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9616096Z hint: 'development'. The just-created branch can be renamed via this command:
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9616783Z hint:
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9617271Z hint: 	git branch -m <name>
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9617758Z hint:
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9618330Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9619253Z Initialized empty Git repository in /home/runner/work/MinersWar/MinersWar/.git/
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9623436Z [command]/usr/bin/git remote add origin https://github.com/jrdbacosta/MinersWar
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9657162Z ##[endgroup]
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9661740Z ##[group]Disabling automatic garbage collection
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9662530Z [command]/usr/bin/git config --local gc.auto 0
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9690301Z ##[endgroup]
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9690948Z ##[group]Setting up auth
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9697683Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:13.9728490Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.0066000Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.0098028Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.0329313Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.0362734Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.0608925Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.0645090Z ##[endgroup]
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.0646260Z ##[group]Fetching the repository
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.0653701Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e6ca27759c4d453bb82fae3d24ced3bdb1abde12:refs/remotes/origin/main
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.2993727Z From https://github.com/jrdbacosta/MinersWar
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.2995281Z  * [new ref]         e6ca27759c4d453bb82fae3d24ced3bdb1abde12 -> origin/main
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3027076Z ##[endgroup]
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3028082Z ##[group]Determining the checkout info
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3029798Z ##[endgroup]
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3035747Z [command]/usr/bin/git sparse-checkout disable
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3077622Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3104232Z ##[group]Checking out the ref
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3107774Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3233046Z Switched to a new branch 'main'
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3235205Z branch 'main' set up to track 'origin/main'.
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3242269Z ##[endgroup]
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3277355Z [command]/usr/bin/git log -1 --format=%H
+Deploy on push to main or tag	Checkout code	2026-01-08T20:34:14.3300090Z e6ca27759c4d453bb82fae3d24ced3bdb1abde12
+Deploy on push to main or tag	Set up Node.js	﻿2026-01-08T20:34:14.3543929Z ##[group]Run actions/setup-node@v4
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:14.3544455Z with:
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:14.3544803Z   node-version: 22.10.0
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:14.3545211Z   cache: npm
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:14.3545560Z   always-auth: false
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:14.3545946Z   check-latest: false
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:14.3546462Z   token: ***
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:14.3546818Z ##[endgroup]
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:14.5260781Z Attempting to download 22.10.0...
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:14.9705210Z Acquiring 22.10.0 - x64 from https://github.com/actions/node-versions/releases/download/22.10.0-11377615849/node-22.10.0-linux-x64.tar.gz
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:15.3658002Z Extracting ...
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:15.3760463Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/d2ceca87-963e-4763-8bdc-48cfa14e5c6d -f /home/runner/work/_temp/69588074-2b96-4779-85e4-9c2bde908ac2
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:16.6229453Z Adding to the cache ...
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:18.3555563Z ##[group]Environment details
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:18.5926995Z node: v22.10.0
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:18.5927715Z npm: 10.9.0
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:18.5929049Z yarn: 1.22.22
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:18.5929835Z ##[endgroup]
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:18.5950021Z [command]/opt/hostedtoolcache/node/22.10.0/x64/bin/npm config get cache
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:18.6968162Z /home/runner/.npm
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:18.7679102Z Cache hit for: node-cache-Linux-x64-npm-f572aa0531c7894b6454d0fadc11f9cb912cb429e8ba3e7b183be415d898ca72
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:19.4008944Z Received 125731024 of 125731024 (100.0%), 208.2 MBs/sec
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:19.4009971Z Cache Size: ~120 MB (125731024 B)
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:19.4043512Z [command]/usr/bin/tar -xf /home/runner/work/_temp/84a4aa33-7467-41b9-b3ab-6d2be7ace9a4/cache.tzst -P -C /home/runner/work/MinersWar/MinersWar --use-compress-program unzstd
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:19.6455579Z Cache restored successfully
+Deploy on push to main or tag	Set up Node.js	2026-01-08T20:34:19.6716605Z Cache restored from key: node-cache-Linux-x64-npm-f572aa0531c7894b6454d0fadc11f9cb912cb429e8ba3e7b183be415d898ca72
+Deploy on push to main or tag	Install dependencies	﻿2026-01-08T20:34:19.6917233Z ##[group]Run npm ci
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:19.6917592Z [36;1mnpm ci[0m
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:19.6959996Z shell: /usr/bin/bash -e {0}
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:19.6960294Z ##[endgroup]
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:23.2206261Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:23.3151474Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:23.3256508Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:23.4065321Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:23.4081069Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:23.4257937Z npm warn deprecated glob@7.1.7: Glob versions prior to v9 are no longer supported
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:24.9528788Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:25.7730802Z 
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:25.7732557Z added 489 packages, and audited 490 packages in 6s
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:25.7733053Z 
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:25.7733300Z 176 packages are looking for funding
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:25.7733965Z   run `npm fund` for details
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:25.7742026Z 
+Deploy on push to main or tag	Install dependencies	2026-01-08T20:34:25.7742391Z found 0 vulnerabilities
+Deploy on push to main or tag	Build project (optional)	﻿2026-01-08T20:34:25.8283610Z ##[group]Run npm run build || true
+Deploy on push to main or tag	Build project (optional)	2026-01-08T20:34:25.8359676Z [36;1mnpm run build || true[0m
+Deploy on push to main or tag	Build project (optional)	2026-01-08T20:34:25.8397329Z shell: /usr/bin/bash -e {0}
+Deploy on push to main or tag	Build project (optional)	2026-01-08T20:34:25.8397599Z ##[endgroup]
+Deploy on push to main or tag	Build project (optional)	2026-01-08T20:34:25.9491842Z npm error Missing script: "build"
+Deploy on push to main or tag	Build project (optional)	2026-01-08T20:34:25.9492276Z npm error
+Deploy on push to main or tag	Build project (optional)	2026-01-08T20:34:25.9492570Z npm error To see a list of scripts, run:
+Deploy on push to main or tag	Build project (optional)	2026-01-08T20:34:25.9492890Z npm error   npm run
+Deploy on push to main or tag	Build project (optional)	2026-01-08T20:34:25.9501100Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-01-08T20_34_25_901Z-debug-0.log
+Deploy on push to main or tag	Add GitHub SSH Host Key	﻿2026-01-08T20:34:25.9576735Z ##[group]Run mkdir -p ~/.ssh
+Deploy on push to main or tag	Add GitHub SSH Host Key	2026-01-08T20:34:25.9577036Z [36;1mmkdir -p ~/.ssh[0m
+Deploy on push to main or tag	Add GitHub SSH Host Key	2026-01-08T20:34:25.9577321Z [36;1mssh-keyscan github.com >> ~/.ssh/known_hosts[0m
+Deploy on push to main or tag	Add GitHub SSH Host Key	2026-01-08T20:34:25.9614219Z shell: /usr/bin/bash -e {0}
+Deploy on push to main or tag	Add GitHub SSH Host Key	2026-01-08T20:34:25.9614600Z ##[endgroup]
+Deploy on push to main or tag	Add GitHub SSH Host Key	2026-01-08T20:34:25.9920767Z # github.com:22 SSH-2.0-aae3c6b
+Deploy on push to main or tag	Add GitHub SSH Host Key	2026-01-08T20:34:26.0729702Z # github.com:22 SSH-2.0-aae3c6b
+Deploy on push to main or tag	Add GitHub SSH Host Key	2026-01-08T20:34:26.1545109Z # github.com:22 SSH-2.0-aae3c6b
+Deploy on push to main or tag	Add GitHub SSH Host Key	2026-01-08T20:34:26.2641701Z # github.com:22 SSH-2.0-aae3c6b
+Deploy on push to main or tag	Add GitHub SSH Host Key	2026-01-08T20:34:26.2696032Z # github.com:22 SSH-2.0-aae3c6b
+Deploy on push to main or tag	Deploy to Server	﻿2026-01-08T20:34:26.2786029Z ##[group]Run echo "Deployment script goes here"
+Deploy on push to main or tag	Deploy to Server	2026-01-08T20:34:26.2786391Z [36;1mecho "Deployment script goes here"[0m
+Deploy on push to main or tag	Deploy to Server	2026-01-08T20:34:26.2821769Z shell: /usr/bin/bash -e {0}
+Deploy on push to main or tag	Deploy to Server	2026-01-08T20:34:26.2822025Z ##[endgroup]
+Deploy on push to main or tag	Deploy to Server	2026-01-08T20:34:26.2877142Z Deployment script goes here
+Deploy on push to main or tag	Post Set up Node.js	﻿2026-01-08T20:34:26.2933129Z Post job cleanup.
+Deploy on push to main or tag	Post Set up Node.js	2026-01-08T20:34:26.4459851Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-f572aa0531c7894b6454d0fadc11f9cb912cb429e8ba3e7b183be415d898ca72, not saving cache.
+Deploy on push to main or tag	Post Checkout code	﻿2026-01-08T20:34:26.4592804Z Post job cleanup.
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5542654Z [command]/usr/bin/git version
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5579276Z git version 2.52.0
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5621427Z Temporarily overriding HOME='/home/runner/work/_temp/0211e765-a29d-4de6-a54c-d0cd20bc753b' before making global git config changes
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5622975Z Adding repository directory to the temporary git global config as a safe directory
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5628112Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MinersWar/MinersWar
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5664508Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5699033Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5942704Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5964483Z http.https://github.com/.extraheader
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.5977103Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.6008893Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.6240094Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy on push to main or tag	Post Checkout code	2026-01-08T20:34:26.6273606Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy on push to main or tag	Complete job	﻿2026-01-08T20:34:26.6620203Z Cleaning up orphan processes

@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.10.0'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm ci
@@ -42,9 +42,9 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: chore(audit): automatic npm audit fix
-          branch: audit-fix/${{ github.run_id }}
+          commit-message: "chore(audit): automatic npm audit fix"
+          branch: "audit-fix/${{ github.run_id }}"
           title: "chore: npm audit fixes"
           body: |
             This PR contains automatic npm audit fixes applied by CI. Please review and test before merging.
-          labels: automated, audit
+          labels: "automated, audit"

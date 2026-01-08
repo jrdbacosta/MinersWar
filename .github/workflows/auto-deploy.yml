@@ -25,7 +25,13 @@ jobs:
         run: npm ci
 
       - name: Build project (optional)
-        run: npm run build || true
+        run: |
+          if node -e "try{const p=require('./package.json'); process.exit(p.scripts && p.scripts.build ? 0 : 1)}catch(e){process.exit(1)}"; then
+            echo "Found build script — running npm run build";
+            npm run build;
+          else
+            echo "No build script found in package.json — skipping build";
+          fi
 
       - name: Add GitHub SSH Host Key
         run: |

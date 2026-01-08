@@ -1,0 +1,44 @@
+name: Audit Fix
+
+on:
+  schedule:
+    - cron: '0 3 * * 1' # weekly on Monday at 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  audit-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit fix (safe)
+        run: npm audit fix || true
+
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then 
+            git config user.name "github-actions[bot]"; 
+            git config user.email "github-actions[bot]@users.noreply.github.com"; 
+            git add package-lock.json frontend/package-lock.json || true; 
+            git commit -m "chore(audit): automatic npm audit fix" || echo "no commit"; 
+          else echo "no changes"; fi
+
+      - name: Create Pull Request if changes
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: chore(audit): automatic npm audit fix
+          branch: audit-fix/${{ github.run_id }}
+          title: "chore: npm audit fixes"
+          body: |
+            This PR contains automatic npm audit fixes applied by CI. Please review and test before merging.
+          labels: automated, audit

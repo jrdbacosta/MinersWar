@@ -1,0 +1,28 @@
+name: "Automerge Dependabot & Audit-Fix PRs"
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, labeled, unlabeled]
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: read
+    steps:
+      - name: Check PR author and title
+        id: check
+        run: |
+          echo "PR_AUTHOR=${{ github.event.pull_request.user.login }}" >> $GITHUB_OUTPUT
+          echo "PR_TITLE=${{ github.event.pull_request.title }}" >> $GITHUB_OUTPUT
+
+      - name: Auto-merge if Dependabot or audit-fix
+        if: startsWith( github.event.pull_request.user.login, 'dependabot') || contains(github.event.pull_request.title, 'audit-fix') || startsWith(github.head_ref, 'audit-fix')
+        uses: pascalgn/automerge-action@v0.15.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          merge_method: squash
+          minimal_approvals: 0
+          merge_when_green: true

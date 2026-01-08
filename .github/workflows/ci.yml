@@ -2,6 +2,40 @@ name: CI
 
 on:
   push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [22]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Compile contracts
+        run: npx hardhat compile
+      - name: Run tests
+        run: npx hardhat test --no-compile
+
+  slither:
+    name: Static analysis (Slither)
+    runs-on: ubuntu-latest
+    needs: tests
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Slither via Docker
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/src -w /src trailofbits/slither slither --exclude test .
+name: CI
+
+on:
+  push:
     branches: [ main, master, develop ]
   pull_request:
     branches: [ main, master, develop ]

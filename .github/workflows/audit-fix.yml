@@ -39,7 +39,7 @@ jobs:
           else echo "no changes"; fi
 
       - name: Create Pull Request if changes
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore(audit): automatic npm audit fix"

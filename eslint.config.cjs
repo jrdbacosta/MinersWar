@@ -2,6 +2,18 @@ const tsParser = { parser: "@typescript-eslint/parser" };
 
 module.exports = [
   {
+    ignores: [
+      "**/artifacts/**",
+      "**/types/**",
+      "**/frontend/build/**",
+      "**/frontend/node_modules/**",
+      "**/node_modules/**",
+      "**/cache/**",
+      "**/dist/**",
+      "**/*.lock",
+    ],
+  },
+  {
     files: ["**/*.js", "**/*.cjs", "**/*.mjs"],
     languageOptions: {
       ecmaVersion: 2022,

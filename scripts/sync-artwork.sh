@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-SRC=${1:-}
+SRC=${1:-"/Volumes/Dock/Miners War/All Media/NFT"}
 COMMIT=${2:-}
 
 if [ -z "$SRC" ]; then

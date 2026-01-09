@@ -38,3 +38,7 @@ metadata/generated/
 
 # macOS
 .DS_Store
+
+# Ignore raw PNG/SVG working folders that were imported accidentally
+assets/images/PNG/
+assets/images/SVG/

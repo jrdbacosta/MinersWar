@@ -1,0 +1,34 @@
+No contracts to compile
+No Solidity tests to compile
+
+Running Solidity tests
+
+  contracts/Counter.t.sol:CounterTest
+    ✔ test_InitialValue()
+    ✔ test_IncByZero()
+    ✔ testFuzz_Inc(uint8) (runs: 256)
+
+Running Mocha tests
+
+
+  Counter
+    ✔ Should emit the Increment event when calling the inc() function
+    ✔ The sum of the Increment events should match the current value
+
+  PackSale
+    ✔ sells packs and opens them to mint NFTs
+
+  PackSale ERC20 flow
+    ✔ accepts ERC20 payments and opens packs
+
+  PackSale edge cases
+    ✔ reverts when ERC20 allowance is insufficient
+    ✔ reverts if native value is sent while payment token is ERC20
+    ✔ only owner can withdraw ERC20 and native funds
+
+
+  7 passing (193ms)
+
+
+10 passing (3 solidity, 7 mocha)
+

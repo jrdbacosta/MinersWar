@@ -1,4 +1,4 @@
-const tsParser = { parser: "@typescript-eslint/parser" };
+const tsParser = require("@typescript-eslint/parser");
 
 module.exports = [
   {
@@ -6,9 +6,11 @@ module.exports = [
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
-      ecmaFeatures: { jsx: true },
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+      },
     },
-    plugins: { react: require.resolve("eslint-plugin-react") },
+    plugins: { react: require("eslint-plugin-react") },
     rules: {
       "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
       "no-console": "off",
@@ -19,18 +21,18 @@ module.exports = [
   },
   {
     files: ["**/*.ts", "**/*.tsx"],
-    ...tsParser,
     languageOptions: {
+      parser: tsParser,
       ecmaVersion: 2022,
       sourceType: "module",
-      ecmaFeatures: { jsx: true },
       parserOptions: {
         ecmaVersion: 2022,
         sourceType: "module",
+        ecmaFeatures: { jsx: true },
         project: ["./tsconfig.json"],
       },
     },
-    plugins: { "@typescript-eslint": require.resolve("@typescript-eslint/eslint-plugin") },
+    plugins: { "@typescript-eslint": require("@typescript-eslint/eslint-plugin") },
     rules: {
       "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
       "no-console": "off",

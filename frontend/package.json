@@ -22,11 +22,17 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "react-scripts test"
+    "test": "vitest"
   },
   "devDependencies": {
     "vite": "^5.0.0",
-    "@vitejs/plugin-react": "^4.0.0"
+    "@vitejs/plugin-react": "^4.0.0",
+    "vitest": "^1.3.0"
+  },
+  "vitest": {
+    "environment": "jsdom",
+    "setupFiles": "src/setupTests.js",
+    "globals": true
   },
   "eslintConfig": {
     "extends": [

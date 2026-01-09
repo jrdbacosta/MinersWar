@@ -22,3 +22,23 @@
 # Frontend
 /frontend/node_modules
 /frontend/build
+
+# Local dev files
+.env
+.env.*.local
+# CI logs
+ci-logs/
+# IPFS pinned temp
+ipfs/tmp/
+# Artwork sources: use Git LFS for these, but avoid accidentally committing large working files
+assets/sources/
+assets/sources/**/*
+# Generated metadata
+metadata/generated/
+
+# macOS
+.DS_Store
+
+# Ignore raw PNG/SVG working folders that were imported accidentally
+assets/images/PNG/
+assets/images/SVG/

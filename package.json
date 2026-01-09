@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx hardhat test",
     "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix"
+    "lint:fix": "npx eslint . --fix",
+    "metadata:gui": "node ./scripts/metadata-gui.cjs"
   },
   "keywords": [],
   "author": "",
@@ -33,7 +34,9 @@
     "typescript": "~5.8.0"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^5.4.0"
+    "@openzeppelin/contracts": "^5.4.0",
+    "express": "^4.22.1",
+    "multer": "^1.4.5-lts.1"
   },
   "volta": {
     "node": "22.21.1"

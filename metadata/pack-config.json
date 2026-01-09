@@ -1,0 +1,19 @@
+{
+  "packs": {
+    "MinersPack": {
+      "itemsPerPack": 10,
+      "guaranteed": [],
+      "distribution": { "Common": 60, "Uncommon": 25, "Rare": 10, "Epic": 4, "Legendary": 1 }
+    },
+    "WarPack": {
+      "itemsPerPack": 10,
+      "guaranteed": [{"rarity":"Rare","count":1},{"rarity":"Epic","count":1}],
+      "distribution": { "Common": 60, "Uncommon": 25, "Rare": 10, "Epic": 4, "Legendary": 1 }
+    },
+    "UltimatePack": {
+      "itemsPerPack": 10,
+      "guaranteed": [{"rarity":"Epic","count":1},{"rarity":"Legendary","count":1}],
+      "distribution": { "Common": 60, "Uncommon": 25, "Rare": 10, "Epic": 4, "Legendary": 1 }
+    }
+  }
+}

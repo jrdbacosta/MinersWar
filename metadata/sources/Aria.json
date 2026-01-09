@@ -1,0 +1,20 @@
+{
+  "name": "Aria",
+  "character_type": "Human",
+  "clan": "Warriors",
+  "description": "Aria — Human of the Warriors clan.",
+  "image": "ipfs://REPLACE_CID/Aria.png",
+  "attributes": [
+    { "trait_type": "fur_skin_color", "value": "Light" },
+    { "trait_type": "hair_style", "value": "Long" },
+    { "trait_type": "eye_color", "value": "Blue" },
+    { "trait_type": "top_wear", "value": "Armor" },
+    { "trait_type": "bottom_wear", "value": "Jeans" },
+    { "trait_type": "footwear", "value": "Boots" },
+    { "trait_type": "accessories", "value": ["Sword", "Shield"] }
+  ],
+  "royalty": {
+    "receiver": "0x0000000000000000000000000000000000000000",
+    "fee_percent": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "name",
+  "description": "description",
+  "image": "ipfs://<CID>/0001.png",
+  "attributes": [
+    { "trait_type": "Background", "value": "Blue" }
+  ],
+  "royalty": {
+    "receiver": "0x...",
+    "fee_percent": 5
+  }
+}

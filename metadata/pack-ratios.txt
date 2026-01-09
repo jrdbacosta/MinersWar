@@ -1,0 +1,8 @@
+# Pack ratios (editable)
+# Format: PackName | rarity:percentage, ... | guaranteed: description
+
+MinersPack | Common:60, Uncommon:25, Rare:10, Epic:4, Legendary:1 | guaranteed: none (10 random items following ratio)
+
+WarPack    | Common:60, Uncommon:25, Rare:10, Epic:4, Legendary:1 | guaranteed: 1 Rare, 1 Epic; remaining 8 follow ratio
+
+UltimatePack | Common:60, Uncommon:25, Rare:10, Epic:4, Legendary:1 | guaranteed: 1 Epic, 1 Legendary; remaining 8 follow ratio

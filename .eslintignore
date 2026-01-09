@@ -1,4 +1,5 @@
 # Ignore build artifacts and generated files
+
 artifacts/
 types/
 frontend/build/

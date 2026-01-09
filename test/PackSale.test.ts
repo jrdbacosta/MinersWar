@@ -5,9 +5,7 @@ const { ethers } = await network.connect();
 
 describe("PackSale", function () {
   it("sells packs and opens them to mint NFTs", async function () {
-    const signers = await ethers.getSigners();
-    const deployer = signers[0];
-    const buyer = signers[1];
+    const [, buyer] = await ethers.getSigners();
 
     const myNft = await ethers.deployContract("MyNFT");
 

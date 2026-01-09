@@ -25,13 +25,24 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check for Sepolia secrets
+        run: |
+          if [ -z "${{ secrets.SEPOLIA_RPC_URL }}" ] || [ -z "${{ secrets.SEPOLIA_PRIVATE_KEY }}" ]; then
+            echo "⚠️  Sepolia secrets not configured. Deployment will be skipped."
+            echo "To deploy to Sepolia, configure SEPOLIA_RPC_URL and SEPOLIA_PRIVATE_KEY secrets in repository settings."
+          else
+            echo "✅ Sepolia secrets are configured. Proceeding with deployment."
+          fi
+
       - name: Run Ignition deploy for Counter
+        if: ${{ secrets.SEPOLIA_RPC_URL != '' && secrets.SEPOLIA_PRIVATE_KEY != '' }}
         env:
           SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
           SEPOLIA_PRIVATE_KEY: ${{ secrets.SEPOLIA_PRIVATE_KEY }}
         run: npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
 
       - name: Run Ignition deploy for MyNFT (optional)
+        if: ${{ secrets.SEPOLIA_RPC_URL != '' && secrets.SEPOLIA_PRIVATE_KEY != '' }}
         env:
           SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
           SEPOLIA_PRIVATE_KEY: ${{ secrets.SEPOLIA_PRIVATE_KEY }}

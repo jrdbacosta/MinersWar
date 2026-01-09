@@ -5,7 +5,7 @@ const { ethers } = await network.connect();
 
 describe("MyNFT royalties", function () {
   it("returns default royalty info correctly", async function () {
-    const [deployer, receiver] = await ethers.getSigners();
+    const [, receiver] = await ethers.getSigners();
 
     const myNft = await ethers.deployContract("MyNFT");
     await myNft.waitForDeployment?.();
@@ -24,7 +24,7 @@ describe("MyNFT royalties", function () {
   });
 
   it("allows per-token royalty override and reset", async function () {
-    const [deployer, receiver, newReceiver] = await ethers.getSigners();
+    const [, receiver, newReceiver] = await ethers.getSigners();
 
     const myNft = await ethers.deployContract("MyNFT");
     await myNft.waitForDeployment?.();

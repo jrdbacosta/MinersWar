@@ -22,3 +22,17 @@
 # Frontend
 /frontend/node_modules
 /frontend/build
+
+# Log files and temporary directories
+*.log
+*.zip
+/logs-*
+/run-*
+/ci-run-*
+
+# SSH keys
+passkey
+passkey.pub
+
+# Temporary directories
+/read2learn

@@ -1,0 +1,10 @@
+{
+  "name": "<NAME>",
+  "description": "<DESCRIPTION>",
+  "image": "ipfs://<CID>/<FILENAME>",
+  "attributes": [],
+  "royalty": {
+    "receiver": "0x0000000000000000000000000000000000000000",
+    "fee_percent": 0
+  }
+}

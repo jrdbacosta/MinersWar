@@ -151,6 +151,12 @@ jobs:
         working-directory: frontend
         run: npm ci --legacy-peer-deps
 
+      - name: Run frontend tests (Vitest)
+        working-directory: frontend
+        run: npm run test -- --run
+        env:
+          CI: true
+
       - name: Build frontend (Vite)
         working-directory: frontend
         run: npm run build

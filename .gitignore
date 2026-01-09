@@ -22,3 +22,16 @@
 # Frontend
 /frontend/node_modules
 /frontend/build
+
+# Log files and directories
+*.log
+logs-*/
+run-*-logs.txt
+run-*-logs.zip
+logs.zip
+
+# SSH keys and sensitive files
+passkey
+passkey.pub
+*.pem
+*.key
